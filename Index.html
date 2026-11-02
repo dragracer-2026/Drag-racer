@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Drag Racer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="game">
+    <h1>Drag Racer</h1>
+    <p class="intro">Choose your car, then race to the finish line!</p>
+
+    <label for="carChoice">Choose your car:</label>
+    <select id="carChoice">
+      <option value="0">Street Racer</option>
+      <option value="1">Turbo Racer</option>
+      <option value="2">Speedster</option>
+    </select>
+
+    <section class="track" aria-label="Race track">
+      <div class="lane"><span class="car" id="playerCar">🏎️</span></div>
+      <div class="finish">FINISH</div>
+    </section>
+
+    <p id="status" aria-live="polite">Ready? Press START RACE.</p>
+    <div class="buttons">
+      <button id="startButton">START RACE</button>
+      <button id="resetButton" class="secondary">RESET</button>
+    </div>
+    <p class="hint">Tip: Tap ACCELERATE repeatedly to move your car.</p>
+    <button id="accelerateButton" class="accelerate" disabled>ACCELERATE</button>
+
+    <h2>Race Results</h2>
+    <ol id="results"></ol>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
